@@ -1,0 +1,288 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .2s linear;
+    scroll-behavior: smooth;
+    background-color: #2e2c2c;
+}
+
+.section{
+    width: 100%;
+    height: 300vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.section .container{
+    width: 80%;
+    display: block;
+    margin: 0px auto;
+    padding: 50px 0px;
+}
+.container .title{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.container .title h1{
+    text-transform: uppercase;
+    font-size: 26px;
+    color: #5c5b5a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    grid-gap: 10px; 
+    margin: 0 auto;
+   
+} */
+
+/* ----------------------------ALL-ABOUT-BMW-SERIE-3-2012----------------------------------- */
+.BMW {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr;    
+    align-items: center; /* Alineación vertical en el centro */
+    justify-items: center; /* Centrar horizontalmente */
+    padding-top: 30px;
+    width: 85%; /* Ancho del 85% */
+    margin: 0 auto; /* Centrar horizontalmente */
+    height: 86vh;
+    background-color: #f1f5f8; /* Color de fondo frío */
+    border-radius: 20px;
+    margin-bottom: 20px;
+    min-height: 86vh;
+    min-width: 85%;
+}
+
+@media(max-width:1000px){
+    .BMW{
+    grid-template-columns: 1;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "carousel-container"
+    "card-list"
+    }
+}
+
+
+
+
+
+#BMWH1 {
+    width: 100%;
+    height: 127px;
+    background-color: transparent;
+    
+}
+
+#BMWH1 h1 {
+    margin-top: 75px; /* Ajuste de margen top */
+    text-align: center;
+    font-size: 66px;
+    color: rgb(72, 72, 72); /* Color del texto */
+    font-family: 'Montserrat', sans-serif; /* Fuente */
+    font-weight: bold; /* Negrita */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra al texto */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    border-bottom: 2px solid rgb(82, 82, 82); /* Línea fina debajo del texto */
+    border-top: 2px solid rgb(82, 82, 82); /* Línea fina debajo del texto */
+}
+
+
+.carousel-container {
+    grid-column: 1; /* Está en la primera columna */
+    grid-row: 1; /* Está en la primera fila */
+    max-width: 800px;
+    min-width: 400px;
+    height: 500px;
+    margin: 0 auto; 
+}
+
+
+
+
+
+
+
+
+
+/* Card */
+.card-list-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.card-list-icon {
+    margin-right: 15px;
+    font-size: 33px;
+}
+
+.card-list-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    animation: fadeInUp 0.7s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.card-list-item:last-child {
+    border-bottom: none;
+}
+
+.card-list-item:hover {
+    background-color: #f9f9f9;
+    transform: scale(1.02);
+}
+.card-list-item.main-item {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    /* font-weight: bold; */
+    padding: 10px 0;
+}
+.card-list-item.main-item.main-title {
+    font-size: 45px;
+}
+.card-list-icon {
+    font-size: 35px;
+}
+.car-name {
+    font-size: 59px;
+    font-weight: bold;
+}
+.bmw-logo {
+    color: #666666; /* Cambiar el color del logotipo a gris */
+}
+/* ----------------CARD-----1---------------- */
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 1300px) {
+    .serie3card {
+        margin-top: 30px;
+        width: 700px;
+        height: 1000px;
+        border: none;
+        background-color: #f1f5f8; /* Color de fondo frío */
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin: 0 auto; /* Centrar horizontalmente */
+        transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Transiciones para la animación */
+        
+    }
+    .serie3card {
+        padding: 10px; /* Reduce el relleno */
+    }
+    .card-list-container {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .card-list-item {
+        padding: 5px; /* Reduce el relleno */
+    }
+    .card-list-item.main-item {
+        font-size: 20px; /* Reduce el tamaño de fuente */
+        padding: 5px 0;
+    }
+    .car-name {
+        font-size: 30px; /* Reduce el tamaño de fuente */
+    }
+}

@@ -1,0 +1,861 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.header{
+    width:100%;
+    height: 76px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    box-shadow: 0 0 10px #000;
+    background: rgb(0, 0, 0);
+}
+#chk1{
+    display: none;
+     
+     
+}
+i{
+    color: #ff7300;
+    cursor: pointer;
+}
+.header .logo{
+    flex: 1;
+    color:#fffdfc;
+    margin-left: 50px;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.header .search-box{
+    flex: 1;
+    position: relative;
+}
+.search-box input{
+    width:100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background:#f2f2f2;
+    border-radius: 30px;
+    color:gray;
+    font-size: 16px;
+    padding-left: 5px;
+    padding-right: 40px;
+    text-align: center;
+     
+}
+ 
+.search-box button{
+    cursor: pointer;
+    width:40px;
+    height: 40px;
+    border-radius: 30px;
+    border:none;
+    position: absolute;
+    top:0;
+    right: 0;
+    transform: scale(0.9);
+    background: #ff7300;
+    color: #fff;
+}
+.header ul {
+    flex:2;
+    display: flex;
+    justify-content: space-evenly;
+}
+.header ul li{
+    list-style: none;
+}
+.header ul li a{
+    text-decoration: none;
+    color:#fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 5px 10px;
+}
+.header ul li a:hover{
+    border-bottom: 2px solid rgb(255, 132, 0);
+}
+.header .menu{
+    font-size: 2.5em;
+    display: none;
+}
+@media(max-width:1000px){
+    .search-box button{
+        position: absolute;
+    }
+    .header ul{
+        position: fixed;
+        top:100px;
+        right: -100%;
+        background: rgba(0,0,0,0.5);
+        height: calc(100vh - 100px);
+        width:50%;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s linear;
+    }
+     
+    .header .menu{
+        display: block;
+        width:100px;
+        text-align: center;
+    }
+    #chk1:checked ~ ul{
+        right: 0;
+        
+    }
+  
+}
+@media(max-width:1263px){
+    .header ul li a{
+        padding: 5px 6px;
+    }
+    .icons-fa{
+        padding: 5px 6px;
+    }
+}
+@media(max-width:1150px){
+    .header ul li{
+        font-size: 14px;
+    }
+    .header ul li a{
+        padding: 5px 5px;
+    }
+}
+
+.front-page {
+    height: 650px;
+    width: 100%;
+    position: relative;
+    background: url('../assets/img/background-image/white-car.gif') no-repeat center center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Evita que el contenido se desborde del contenedor */
+}
+
+/* Estilos para pantalla grande */
+@media (min-width: 768px) {
+    .front-page {
+        background-color: #f0f0f0; /* Fondo gris para pantalla grande */
+    }
+
+    .searchnew2 {
+        width: 380px;
+        height: 55px;
+        background-color: rgba(137, 43, 226, 0);
+    }
+
+    .titleh3 {
+        background-color: #00000000;
+        width: 100%;
+        font-size: 40px;
+        margin-bottom: 25px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: #ffffff;
+    }
+}
+
+/* Estilos para pantalla pequeña */
+@media (max-width: 767px) {
+    .front-page {
+        background-color: #f0f0f0; /* Fondo gris para pantalla pequeña */
+    }
+
+    .searchnew2 {
+        width: 100%;
+        height: 55px;
+        background-color: rgba(137, 43, 226, 0);
+    }
+
+    .titleh3 {
+        background-color: #00000000;
+        width: 100%;
+        font-size: 32px;
+        margin-bottom: 15px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: #ffffff;
+    }
+}
+
+/* Estilos del buscador */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff8f8;
+    border-radius: 100px;
+    padding: 2px 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.field-input-label-challenger input {
+    width: 100%;
+    padding: 1px;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+
+@media (max-width: 767px){
+    .search-container {
+        width: 70vh;
+        justify-content: center;
+        align-items: center;
+    }
+    .searchnew2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}    
+
+
+  /* Estilos para el icono de búsqueda */
+.fa-search {
+    font-size: 19px; /* Tamaño del icono, puedes ajustarlo según tus preferencias */
+    color: black; /* Color negro para el icono */
+    background: none; /* Eliminamos el fondo */
+    border: none; /* Eliminamos el borde */
+    margin-right: -1px; /* Espacio entre el icono y el campo de entrada */
+
+  }
+  
+  /* Estilos para el botón de búsqueda */
+  .search-button {
+    background: none; /* Eliminamos el fondo */
+    border: none; /* Eliminamos el borde */
+    padding: 0; /* Eliminamos el relleno para que el botón no tenga altura extra */
+  }
+
+/* FINISHED HEADER */
+
+
+
+
+
+
+
+/* INICIO DE MODIFICACION FAVORITE-BRAND */
+.brand-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 0.2fr);
+    grid-template-rows: repeat(3, 20vh) ;
+    grid-template-areas: 
+    "toyota ford mercedes-benz Honda"
+    "Volskwagen Chevrolet Fiat Hyundai"
+    "Audi Bmw Kia Nissan"
+    ;
+    grid-row-gap: 15px;
+    grid-column-gap: 30px;
+    background-color: #ffffff;
+    height: 73vh;
+    width: 100%;
+    justify-content: center;
+    align-items: centers;
+}
+
+@media (max-width: 767px){
+    .brand-cards{
+        display: grid;
+        grid-template-columns: repeat(3, 0.4fr);
+        grid-template-rows: repeat(4, 25vh) ;
+        grid-template-areas: 
+        "toyota ford mercedes-benz "
+        "Volskwagen Chevrolet Fiat "
+        "Audi Bmw Kia"
+        "Hyundai Honda Nissan"
+        ;
+        grid-row-gap: 20px;
+        grid-column-gap: 25px;
+        background-color: #ffffff;
+        height: 120vh;
+        width: 100%;
+        justify-content: center;
+        align-items: centers;
+    }
+    .brand{
+        justify-items: center;
+    }
+}
+
+@media (max-width: 625px){
+    .brand-cards{
+        display: grid;
+        grid-template-columns: repeat(2, 0.1fr);
+        grid-template-rows: repeat(6, 20vh) ;
+        grid-template-areas: 
+        "toyota ford "
+        "Volskwagen mercedes-benz"
+        "Audi Bmw "
+        "Hyundai Honda"
+        "Nissan Kia"
+        "Fiat Chevrolet"
+        ;
+        grid-row-gap: 0px;
+        grid-column-gap: 20px;
+        background-color: #ffffff;
+        height: 150vh;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        }
+        .toyota{
+            height: 100px;
+            width: 150px;
+        }
+        .ford{
+            height: 100px;
+            width: 150px;
+        }
+        .Volskwagen{
+            height: 100px;
+            width: 150px;
+        }
+        .mercedes-benz{
+            height: 100px;
+            width: 150px;
+        }
+        .Audi{
+            height: 100px;
+            width: 150px;
+        }
+        .Bmw{
+            height: 100px;
+            width: 150px;
+        }
+        .Hyundai{
+            height: 100px;
+            width: 150px;
+        }
+        .Honda{
+            height: 100px;
+            width: 150px;
+        }
+        .Nissan{
+            height: 100px;
+            width: 150px;
+        }
+        .Kia{
+            height: 100px;
+            width: 150px;
+        }
+        .Fiat{
+            height: 100px;
+            width: 150px;
+        }
+        .Chevrolet{
+            height: 100px;
+            width: 150px;
+        }
+        .title-brand{
+            font-size: 20px;
+        }
+        .brand{
+            height: 135vh;
+        }
+}
+
+
+.title-brand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    background-color: #ffffff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 26px;
+    color: #2c2b2b;
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+
+
+.brand-cards div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e4e2e23d;
+    margin-top: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+}
+
+.brand-cards div:hover {
+    background: linear-gradient(to bottom, rgba(100, 100, 100, 0.158), #b6b3b03b);
+    transform: translateY(-13px);
+    background-color: rgba(255, 254, 254, 0.329);
+    
+}
+
+.img-brand{
+    height: 41px;
+    width: 43px;
+}
+
+#ford-brand{
+    height: 28px;
+    width: 75px;
+}
+#chevrolet-brand{
+    height: 35px;
+    width: 85px;
+}
+#audi-brand{
+    height: 25px;
+    width: 70px;
+}
+#toyota-brand{
+    height: 38px;
+    width: 56px;
+}
+#hyundai-brand{
+    height: 38px;
+    width: 58px;
+}
+#renault-brand{
+    height: 44px;
+    width: 35px;
+}
+
+/* FINALIZACIÓN DE MODIFICACIÓN FAVORITE-BRAND */
+
+
+
+
+/* INICIO DE MODIFICACIÓN WHY US */
+.title-whyus{
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+    color: white;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-top: 20px;
+}
+
+.container-cards{
+    width: 100%;
+    height: 65vh;
+    background-color: #000000;
+    padding: 0px 0px;
+    display: grid; 
+}
+.container-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.container-section .card{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 20%;
+    margin: 20px 20px;
+    box-shadow: 0px 2px 8px 0px rgba(201, 193, 193, 0.0);
+    background-color: #000000;
+}
+.container-section .card:hover{
+    background-color: #14141444;
+    transform: scale(1.1);
+}
+.container-section .card img{
+    width: 40%;
+    height: auto;
+}
+
+
+.container-section .card h2{
+    margin: 15px 0px;
+    font-size: 26px;
+    color: #ff7400;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.container-section .card p{
+    font-size: 22px;
+    color: #eaf0f2;
+    line-height: 1.5;
+    padding: 0px 10px;
+    margin-bottom: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.btn-father{
+    text-align: center;
+    background-color: #000000;
+    height: 9vh;
+}
+.btn-father a{
+    border: 5px solid #fffefc;
+    background: #000000;
+    padding: 9px;
+    text-decoration: none;
+    border-radius: 120px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 13px;
+    color: white;
+}
+.btn-father a:hover{
+    background: #000000;
+    color: #ff7400;
+    border: 5px solid  #ff7400;
+}
+
+@media (min-width: 768px) and (max-width: 1149px) {
+    .container-cards{
+        width: 100%;
+        height: 180vh;
+        background-color: #000000;
+        padding: 0px 0px;
+        display: grid;
+    }
+    .container-section{
+        flex-direction: column;
+    }
+    .container-section .card{
+        flex-wrap: wrap;
+        width: 50%;
+        margin: 20px 20px;
+        box-shadow: 0px 2px 8px 0px rgba(201, 193, 193, 0.0);
+        background-color: #000000;
+    }
+    .container-section .card p{
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .container-cards{
+        width: 100%;
+        height: 180vh;
+    }
+    .container-section{
+        flex-direction: column;
+    }
+    .container-section .card{
+        flex-wrap: wrap;
+        width: 50%;
+        margin: 20px 20px;
+    }
+    .container-section .card h2{
+        font-size: 20px;
+    }
+    .container-section .card p{
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 459px) {
+    .container-cards{
+        height: 190vh;
+    }
+    .container-section .card h2{
+        font-size: 17px;
+    }
+    .container-section .card p{
+        font-size: 15px;
+    }
+    .title-whyus{
+        font-size: 23px;
+    }
+    
+}
+
+
+
+
+
+
+/* FINALIZACIÓN DE MODIFICACIÓN WHY US */
+
+
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+*{
+	padding:0;
+	margin:0;
+}
+
+
+/* The footer is fixed to the bottom of the page */
+
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+
+
+
+  #whatsapp {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    z-index: 1000;
+}
+#whatsapp:hover{
+    width: 60px;
+    height: 60px;
+    transition: ease-in-out;
+}
+/* END WS */
+
+
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+*{
+	padding:0;
+	margin:0;
+}
+
+html{
+	background-color: #eaf0f2;
+}
+
+body{
+	font:16px/1.6 Arial,  sans-serif;
+}
+
+header{
+	text-align: center;
+	padding-top: 100px;
+	margin-bottom:190px;
+}
+
+header h1{
+	font: normal 32px/1.5 'Open Sans', sans-serif;
+	color: #3F71AE;
+	padding-bottom: 16px;
+}
+
+header h2{
+	color: #F05283;
+}
+
+header span{
+	color: #3F71EA;
+}
+
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+*{
+	padding:0;
+	margin:0;
+}
+
+html{
+	background-color: #eaf0f2;
+}
+
+body{
+	font:16px/1.6 Arial,  sans-serif;
+}
+
+header{
+	text-align: center;
+	padding-top: 100px;
+	margin-bottom:190px;
+}
+
+header h1{
+	font: normal 32px/1.5 'Open Sans', sans-serif;
+	color: #3F71AE;
+	padding-bottom: 16px;
+}
+
+header h2{
+	color: #F05283;
+}
+
+header span{
+	color: #3F71EA;
+}
+
+
+/* The footer is fixed to the bottom of the page */
+
+footer{
+	/* position: fixed; */
+	bottom: 0;
+}
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+
+.footer-distributed{
+	background-color: #272626;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 80px 50px;
+	margin-top: 0;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 30%;
+}
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+/* The company logo */
+
+.footer-distributed .footer-left img{
+	width: 30%;
+}
+
+.footer-distributed h3 span{
+	color:  #ff7400;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #ffffff;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 30%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.icons i {
+    text-shadow: 1px 1px 1px black;
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}

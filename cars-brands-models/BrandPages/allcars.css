@@ -1,0 +1,1308 @@
+*body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+   /* ----------------------NAVABAR--------------- */
+   .header{
+    width:100%;
+    height: 76px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px #000;
+    background: rgb(0, 0, 0);
+}
+#chk1{
+    display: none;
+     
+     
+}
+i{
+    color: #ff7300;
+    cursor: pointer;
+}
+.header .logo{
+    flex: 1;
+    color:#fffdfc;
+    margin-left: 50px;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.header .search-box{
+    flex: 1;
+    position: relative;
+}
+.search-box input{
+    width:100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background:#f2f2f2;
+    border-radius: 30px;
+    color:gray;
+    font-size: 16px;
+    padding-left: 5px;
+    padding-right: 40px;
+    text-align: center;
+     
+}
+ 
+.search-box button{
+    cursor: pointer;
+    width:40px;
+    height: 40px;
+    border-radius: 30px;
+    border:none;
+    position: absolute;
+    top:0;
+    right: 0;
+    transform: scale(0.9);
+    background: #ff7300;
+    color: #fff;
+}
+.header ul {
+    flex:2;
+    display: flex;
+    justify-content: space-evenly;
+}
+.header ul li{
+    list-style: none;
+}
+.header ul li a{
+    text-decoration: none;
+    color:#fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 5px 10px;
+}
+.header ul li a:hover{
+    border-bottom: 2px solid rgb(255, 132, 0);
+}
+.header .menu{
+    font-size: 2.5em;
+    display: none;
+}
+@media(max-width:1000px){
+    .search-box button{
+        position: absolute;
+    }
+    .header ul{
+        position: fixed;
+        top:100px;
+        right: -100%;
+        background: rgba(0,0,0,0.5);
+        height: calc(100vh - 100px);
+        width:50%;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s linear;
+    }
+
+    .header .menu{
+        display: block;
+        width:100px;
+        text-align: center;
+    }
+    #chk1:checked ~ ul{
+        right: 0;
+        
+    }
+  
+}
+@media(max-width:1263px){
+    .header ul li a{
+        padding: 5px 6px;
+    }
+    .icons-fa{
+        padding: 5px 6px;
+    }
+}
+@media(max-width:1150px){
+    .header ul li{
+        font-size: 14px;
+    }
+    .header ul li a{
+        padding: 5px 5px;
+    }
+}
+/* ----------------------NAVBAR-END------------------------ */
+
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna */
+    grid-template-rows: 1fr 1fr 1fr; 
+    grid-gap: 10px; /* Espacio entre las cards */
+    margin: 0 auto; /* Centrar horizontalmente */
+   
+}
+
+/* ----------------------------ALL-ABOUT-BMW-SERIE-3-2012----------------------------------- */
+.BMW {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr;    
+    align-items: center; /* Alineación vertical en el centro */
+    justify-items: center; /* Centrar horizontalmente */
+    padding-top: 30px;
+    width: 85%; /* Ancho del 85% */
+    margin: 0 auto; /* Centrar horizontalmente */
+    height: 86vh;
+    background-color: #f1f5f8; /* Color de fondo frío */
+    border-radius: 20px;
+    margin-bottom: 20px;
+    min-height: 86vh;
+    min-width: 85%;
+}
+
+
+
+
+
+
+#BMWH1 {
+    width: 100%;
+    height: 127px;
+    background-color: transparent;
+    
+}
+
+#BMWH1 h1 {
+    margin-top: 75px; /* Ajuste de margen top */
+    text-align: center;
+    font-size: 66px;
+    color: rgb(72, 72, 72); /* Color del texto */
+    font-family: 'Montserrat', sans-serif; /* Fuente */
+    font-weight: bold; /* Negrita */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra al texto */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    border-bottom: 2px solid rgb(82, 82, 82); /* Línea fina debajo del texto */
+    border-top: 2px solid rgb(82, 82, 82); /* Línea fina debajo del texto */
+}
+
+
+
+#merchoo {
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    
+}
+
+#merchoo h1 { 
+    margin-top: 75px; /* Ajuste de margen top */
+    text-align: center;
+    font-size: 55px;
+    color: rgb(72, 72, 72); /* Color del texto */
+    font-family: 'Montserrat', sans-serif; /* Fuente */
+    font-weight: bold; /* Negrita */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra al texto */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    border-bottom: 2px solid rgb(82, 82, 82); /* Línea fina debajo del texto */
+    border-top: 2px solid rgb(82, 82, 82); /* Línea fina debajo del texto */
+}
+
+
+
+
+
+
+
+
+
+.carousel-container {
+    grid-column: 1; /* Está en la primera columna */
+    grid-row: 1; /* Está en la primera fila */
+    max-width: 800px;
+    min-width: 400px;
+    height: 500px;
+    margin: 0 auto; 
+}
+
+
+
+
+
+
+
+/* Card */
+.card-list-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.card-list-icon {
+    margin-right: 15px;
+    font-size: 33px;
+}
+
+.card-list-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    animation: fadeInUp 0.7s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.card-list-item:last-child {
+    border-bottom: none;
+}
+
+.card-list-item:hover {
+    background-color: #f9f9f9;
+    transform: scale(1.02);
+}
+.card-list-item.main-item {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    /* font-weight: bold; */
+    padding: 10px 0;
+}
+.card-list-item.main-item.main-title {
+    font-size: 45px;
+}
+.card-list-icon {
+    font-size: 35px;
+}
+.car-name {
+    font-size: 49px;
+    font-weight: bold;
+}
+.bmw-logo {
+    color: #666666; /* Cambiar el color del logotipo a gris */
+}
+
+
+@media (max-width: 1300px){
+    #BMWH1 h1 {
+        margin-top: 20px; /* Ajuste de margen top */
+        text-align: center;
+        font-size: 6vh;
+    }
+    .carousel-container {
+    grid-column: 1; /* Está en la primera columna */
+    grid-row: 1; /* Está en la primera fila */
+    min-width: 150px;
+    height: 500px;
+    margin: 0 ; 
+    }
+    .BMW {
+        margin-bottom: 80px;                 
+        height: 185vh;                     
+        padding-top: 5px;              
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr; 
+        grid-template-areas:
+            "carousel-container"
+            "card-list";
+    } 
+    .carousel-container {
+        grid-area: carousel-container;
+        width: 450px;            
+        
+    }
+    .card-list-container {
+        grid-area: card-list;                                   
+    }
+    .card-list-container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .card-list-icon {
+        font-size: 35px;
+    }
+    .card-list-item {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        animation: fadeInUp 0.7s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
+    }
+    .card-list-item:last-child {
+        border-bottom: none;
+    }
+    .card-list-item:hover {
+        background-color: #f9f9f9;
+        transform: scale(1.02);
+    }
+    .card-list-item.main-item {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 25px;
+        padding: 10px ;
+        font-weight: bold;
+    }
+    .card-list-item.main-item.main-title {
+        font-size: 40px;
+    }
+    .card-list-icon {
+        font-size: 28repx;      
+    }
+    .card-list-item {
+        text-size-adjust: 50px;
+    }
+    .card-list p{
+        font-size: 25px;
+    }
+    .car-name {
+        font-size: 40px;
+        font-weight: bold;
+    }
+    .bmw-logo {
+        color: #666666; /* Cambiar el color del logotipo a gris */
+    }
+} 
+
+@media (max-width: 1000px){
+#BMWH1 h1 {
+    margin-top: 20px; /* Ajuste de margen top */
+    text-align: center;
+    font-size: 6vh;
+}
+.carousel-container {
+grid-column: 1; /* Está en la primera columna */
+grid-row: 1; /* Está en la primera fila */
+min-width: 150px;
+height: 500px;
+margin: 0 ; 
+}
+.BMW {
+    margin-bottom: 80px;                 
+    height: 185vh;                     
+    padding-top: 5px;              
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr; 
+    grid-template-areas:
+        "carousel-container"
+        "card-list";
+} 
+.carousel-container {
+    grid-area: carousel-container;
+    width: 450px;            
+    
+}
+.card-list-container {
+    grid-area: card-list;                                   
+}
+.card-list-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.card-list-icon {
+    font-size: 45px;
+}
+.card-list-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    animation: fadeInUp 0.7s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+.card-list-item:last-child {
+    border-bottom: none;
+}
+.card-list-item:hover {
+    background-color: #f9f9f9;
+    transform: scale(1.02);
+}
+.card-list-item.main-item {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    padding: 10px ;
+}
+.card-list-item.main-item.main-title {
+    font-size: 40px;
+}
+.card-list-icon {
+    font-size: 28repx;      
+}
+.card-list-item {
+    text-size-adjust: 50px;
+}
+.card-list p{
+    font-size: 20px;
+}
+.car-name {
+    font-size: 50px;
+    font-weight: bold;
+}
+.bmw-logo {
+    color: #666666; /* Cambiar el color del logotipo a gris */
+}
+}
+
+@media (max-width: 700px) {
+    #BMWH1 h1 {
+        margin-top: 20px; /* Ajuste de margen top */
+        text-align: center;
+        font-size: 6vh;
+    }
+.carousel-container {
+    grid-column: 1; /* Está en la primera columna */
+    grid-row: 1; /* Está en la primera fila */
+    min-width: 150px;
+    height: 500px;
+    margin: 0 ; 
+}
+    .BMW {
+        margin-bottom: 80px;
+        height: 165vh;
+        width: 95%;
+        padding-top: 5px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr; 
+        grid-template-areas:
+            "carousel-container"
+            "card-list";
+    } 
+    .carousel-container {
+        grid-area: carousel-container;
+        width: 450px;            
+        
+    }
+    .card-list-container {
+        grid-area: card-list;                                   
+    }
+    .card-list-container {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .card-list-icon {
+       
+        font-size: 20px;
+    }
+    .card-list-item {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        animation: fadeInUp 0.7s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
+    }
+    .card-list-item:last-child {
+        border-bottom: none;
+    }
+    .card-list-item:hover {
+        background-color: #f9f9f9;
+        transform: scale(1.02);
+    }
+    .card-list-item.main-item {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        padding: 10px ;
+    }
+    .card-list-item.main-item.main-title {
+        font-size: 30px;
+    }
+    .card-list-icon {
+        font-size: 25px;
+    }
+    .car-name {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .bmw-logo {
+        color: #666666; /* Cambiar el color del logotipo a gris */
+    }
+}
+
+
+@media (max-width: 520px) {
+    #BMWH1 h1 {
+        margin-top: 20px; /* Ajuste de margen top */
+        text-align: center;
+        font-size: 6vh;
+    }
+    .carousel-inner{
+        width: 90%;
+         height: 90%;
+    }
+.carousel-container {
+    grid-column: 1; /* Está en la primera columna */
+    grid-row: 1; /* Está en la primera fila */
+    min-width: 150px;
+    height: 300px;                     
+    margin: 0 ; 
+}
+    .BMW {
+        margin-bottom: 80px;
+        height: 165vh;
+        width: 95%;
+        padding-top: 5px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr; 
+        grid-template-areas:
+            "carousel-container"
+            "card-list";
+    } 
+    .carousel-container {
+        grid-area: carousel-container;
+        width: 390px;            
+        
+    }
+    .card-list-container {
+        grid-area: card-list;  
+        padding-top: 5px;                                 
+    }
+    .card-list-container {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    .card-list-icon {
+       
+        font-size: 20px;
+    }
+    .card-list-item {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        padding-top: 5px;
+        border-bottom: 1px solid #ddd;
+        animation: fadeInUp 0.7s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
+    }
+    .card-list-item:last-child {
+        border-bottom: none;
+    }
+    .card-list-item:hover {
+        background-color: #f9f9f9;
+        transform: scale(1.02);
+    }
+    .card-list-item.main-item {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        padding: 10px ;
+        padding-top: 5px;
+    }
+    .card-list-item.main-item.main-title {
+        font-size: 30px;
+    }
+    .card-list-icon {
+        font-size: 25px;
+    }
+    .car-name {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .bmw-logo {
+        color: #666666; /* Cambiar el color del logotipo a gris */
+    }
+}
+
+@media (max-width: 450px) {
+    #BMWH1 h1 {
+        margin-top: 20px; /* Ajuste de margen top */
+        text-align: center;
+        font-size: 6vh;
+    }
+    .carousel-inner{
+        width: 90%;
+         height: 90%;
+    }
+.carousel-container {
+    grid-column: 1; /* Está en la primera columna */
+    grid-row: 1; /* Está en la primera fila */
+    min-width: 150px;
+    height: 300px;                     
+    margin: 0 ; 
+    
+}
+    .BMW {
+        margin-bottom: 80px;
+        height: 145vh;
+        width: 95%;
+        padding-top: 5px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr; 
+        grid-template-areas:
+            "carousel-container"
+            "card-list";
+    } 
+    .carousel-container {
+        grid-area: carousel-container;
+        width: 350px;            
+        
+    }
+    .card-list-container {
+        grid-area: card-list;  
+        padding-top: 5px;                                 
+    }
+    .card-list-container {
+        max-width: 330px;
+        margin: 0 auto;
+    }
+    .card-list-icon {
+       
+        font-size: 20px;
+    }
+    .card-list-item {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        padding-top: 5px;
+        border-bottom: 1px solid #ddd;
+        animation: fadeInUp 0.7s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
+    }
+    .card-list-item:last-child {
+        border-bottom: none;
+    }
+    .card-list-item:hover {
+        background-color: #f9f9f9;
+        transform: scale(1.02);
+    }
+    .card-list-item.main-item {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        padding: 10px ;
+        padding-top: 5px;
+    }
+    .card-list-item.main-item.main-title {
+        font-size: 30px;
+    }
+    .card-list-icon {
+        font-size: 25px;
+    }
+    .car-name {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .bmw-logo {
+        color: #666666; /* Cambiar el color del logotipo a gris */
+    }
+}
+
+
+@media (max-width: 422px) {
+    #BMWH1 h1 {
+        margin-top: 20px; /* Ajuste de margen top */
+        text-align: center;
+        font-size: 6vh;
+    }
+    .carousel-inner{
+        width: 90%;
+         height: 90%;
+    }
+.carousel-container {
+    grid-column: 1; /* Está en la primera columna */
+    grid-row: 1; /* Está en la primera fila */
+    min-width: 150px;
+    height: 300px;                     
+    margin: 0 ; 
+    
+}
+    .BMW {
+        margin-bottom: 80px;
+        height: 135vh;
+        width: 95%;
+        padding-top: 5px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr; 
+        grid-template-areas:
+            "carousel-container"
+            "card-list";
+    } 
+    .carousel-container {
+        grid-area: carousel-container;
+        width: 330px;            
+        
+    }
+    .card-list-container {
+        grid-area: card-list;  
+        padding-top: 5px;                                 
+    }
+    .card-list-container {
+        max-width: 330px;
+        margin: 0 auto;
+    }
+    .card-list-icon {
+       
+        font-size: 20px;
+    }
+    .card-list-item {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        padding-top: 5px;
+        border-bottom: 1px solid #ddd;
+        animation: fadeInUp 0.7s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
+    }
+    .card-list-item:last-child {
+        border-bottom: none;
+    }
+    .card-list-item:hover {
+        background-color: #f9f9f9;
+        transform: scale(1.02);
+    }
+    .card-list-item.main-item {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        padding: 10px ;
+        padding-top: 5px;
+    }
+    .card-list-item.main-item.main-title {
+        font-size: 30px;
+    }
+    .card-list-icon {
+        font-size: 25px;
+    }
+    .car-name {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .bmw-logo {
+        color: #666666; /* Cambiar el color del logotipo a gris */
+    }
+}
+
+@media (max-width: 389px) {
+    #BMWH1 h1 {
+        margin-top: 20px; /* Ajuste de margen top */
+        text-align: center;
+        font-size: 6vh;
+    }
+    .carousel-inner{
+        width: 90%;
+         height: 90%;
+    }
+.carousel-container {
+    grid-column: 1; /* Está en la primera columna */
+    grid-row: 1; /* Está en la primera fila */
+    min-width: 150px;
+    height: 300px;                     
+    margin: 0 ; 
+    
+}
+    .BMW {
+        margin-bottom: 80px;
+        height: 130vh;
+        width: 95%;
+        padding-top: 5px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr; 
+        grid-template-areas:
+            "carousel-container"
+            "card-list";
+    } 
+    .carousel-container {
+        grid-area: carousel-container;
+        width: 310px;            
+        
+    }
+    .card-list-container {
+        grid-area: card-list;  
+        padding-top: 5px;                                 
+    }
+    .card-list-container {
+        max-width: 330px;
+        margin: 0 auto;
+    }
+    .card-list-icon {
+       
+        font-size: 20px;
+    }
+    .card-list-item {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        padding-top: 5px;
+        border-bottom: 1px solid #ddd;
+        animation: fadeInUp 0.7s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
+    }
+    .card-list-item:last-child {
+        border-bottom: none;
+    }
+    .card-list-item:hover {
+        background-color: #f9f9f9;
+        transform: scale(1.02);
+    }
+    .card-list-item.main-item {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        padding: 10px ;
+        padding-top: 5px;
+    }
+    .card-list-item.main-item.main-title {
+        font-size: 30px;
+    }
+    .card-list-icon {
+        font-size: 25px;
+    }
+    .car-name {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .bmw-logo {
+        color: #666666; /* Cambiar el color del logotipo a gris */
+    }
+}
+
+@media (max-width: 366px) {
+    #BMWH1 h1 {
+        margin-top: 20px; /* Ajuste de margen top */
+        text-align: center;
+        font-size: 6vh;
+    }
+    .carousel-inner{
+        width: 90%;
+         height: 90%;
+    }
+.carousel-container {
+    grid-column: 1; /* Está en la primera columna */
+    grid-row: 1; /* Está en la primera fila */
+    min-width: 150px;
+    height: 300px;                     
+    margin: 0 ; 
+    
+}
+    .BMW {
+        margin-bottom: 80px;
+        height: 130vh;
+        width: 95%;
+        padding-top: 5px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr; 
+        grid-template-areas:
+            "carousel-container"
+            "card-list";
+    } 
+    .carousel-container {
+        grid-area: carousel-container;
+        width: 300px;            
+        
+    }
+    .card-list-container {
+        grid-area: card-list;  
+        padding-top: 5px;                                 
+    }
+    .card-list-container {
+        max-width: 330px;
+        margin: 0 auto;
+    }
+    .card-list-icon {
+       
+        font-size: 20px;
+    }
+    .card-list-item {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        padding-top: 5px;
+        border-bottom: 1px solid #ddd;
+        animation: fadeInUp 0.7s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
+    }
+    .card-list-item:last-child {
+        border-bottom: none;
+    }
+    .card-list-item:hover {
+        background-color: #f9f9f9;
+        transform: scale(1.02);
+    }
+    .card-list-item.main-item {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        padding: 10px ;
+        padding-top: 5px;
+    }
+    .card-list-item.main-item.main-title {
+        font-size: 30px;
+    }
+    .card-list-icon {
+        font-size: 25px;
+    }
+    .car-name {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .bmw-logo {
+        color: #666666; /* Cambiar el color del logotipo a gris */
+    }
+}
+
+
+@media (max-width: 358px) {
+    #BMWH1 h1 {
+        margin-top: 20px; /* Ajuste de margen top */
+        text-align: center;
+        font-size: 6vh;
+    }
+    .carousel-inner{
+        width: 90%;
+         height: 90%;
+    }
+.carousel-container {
+    grid-column: 1; /* Está en la primera columna */
+    grid-row: 1; /* Está en la primera fila */
+    min-width: 150px;
+    height: 300px;                     
+    margin: 0 ; 
+    
+}
+    .BMW {
+        margin-bottom: 80px;
+        height: 130vh;
+        width: 95%;
+        padding-top: 5px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr; 
+        grid-template-areas:
+            "carousel-container"
+            "card-list";
+    } 
+    .carousel-container {
+        grid-area: carousel-container;
+        width: 280px;            
+        
+    }
+    .card-list-container {
+        grid-area: card-list;  
+        padding-top: 5px;                                 
+    }
+    .card-list-container {
+        max-width: 330px;
+        margin: 0 auto;
+    }
+    .card-list-icon {
+       
+        font-size: 20px;
+    }
+    .card-list-item {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        padding-top: 5px;
+        border-bottom: 1px solid #ddd;
+        animation: fadeInUp 0.7s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
+    }
+    .card-list-item:last-child {
+        border-bottom: none;
+    }
+    .card-list-item:hover {
+        background-color: #f9f9f9;
+        transform: scale(1.02);
+    }
+    .card-list-item.main-item {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        padding: 10px ;
+        padding-top: 5px;
+    }
+    .card-list-item.main-item.main-title {
+        font-size: 30px;
+    }
+    .card-list-icon {
+        font-size: 25px;
+    }
+    .car-name {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .bmw-logo {
+        color: #666666; /* Cambiar el color del logotipo a gris */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ----------------CARD-----1---------------- */
+
+
+/* ----------------------------ALL-ABOUT-BMW-SERIE-3-2012----------------------------------- */
+
+
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+*{
+	padding:0;
+	margin:0;
+}
+
+
+/* The footer is fixed to the bottom of the page */
+
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+
+
+
+  #whatsapp {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    z-index: 1000;
+}
+#whatsapp:hover{
+    width: 60px;
+    height: 60px;
+    transition: ease-in-out;
+}
+/* END WS */
+
+
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+*{
+	padding:0;
+	margin:0;
+}
+
+html{
+	background-color: #eaf0f2;
+}
+
+body{
+	font:16px/1.6 Arial,  sans-serif;
+}
+
+header{
+	text-align: center;
+	padding-top: 100px;
+	margin-bottom:190px;
+}
+
+header h1{
+	font: normal 32px/1.5 'Open Sans', sans-serif;
+	color: #3F71AE;
+	padding-bottom: 16px;
+}
+
+header h2{
+	color: #F05283;
+}
+
+header span{
+	color: #3F71EA;
+}
+
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+*{
+	padding:0;
+	margin:0;
+}
+
+html{
+	background-color: #eaf0f2;
+}
+
+body{
+	font:16px/1.6 Arial,  sans-serif;
+}
+
+header{
+	text-align: center;
+	padding-top: 100px;
+	margin-bottom:190px;
+}
+
+header h1{
+	font: normal 32px/1.5 'Open Sans', sans-serif;
+	color: #3F71AE;
+	padding-bottom: 16px;
+}
+
+header h2{
+	color: #F05283;
+}
+
+header span{
+	color: #3F71EA;
+}
+
+
+/* The footer is fixed to the bottom of the page */
+
+/* FOOTER */
+
+/* The footer is fixed to the bottom of the page */
+footer{
+	position: fixed;
+	bottom: 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+
+.footer-distributed{
+	background-color: #272626;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 80px 50px;
+	margin-top: 0;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 30%;
+}
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+/* The company logo */
+
+.footer-distributed .footer-left img{
+	width: 30%;
+}
+
+.footer-distributed h3 span{
+	color:  #ff7400;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #ffffff;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 30%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.icons i {
+    text-shadow: 1px 1px 1px black;
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+/* FINISHED FOOTER */
